@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+.button-2 {
+  --color: #723ff3;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  border: 1px solid;
+  
+  text-transform: uppercase;
+  
+  z-index: 1;
+ }
+ 
+ .button-2::before, .button-2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button-2::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button-2::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button-2:hover::before, .button-2:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button-2:hover {
+  color:rgb(255, 255, 255);
+ }
+ 
+ .button-2:active {
+  filter: brightness(.8);
+ }
+
+ .button {
+  --color: #ab3ff3;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  border: 1px solid;
+  
+  text-transform: uppercase;
+  
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color:#450371;
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #723ff3, #e008ce, #3f9ff3);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-in 6s ease forwards;
+}
+
+/* .gradient-text-p {
+  background: linear-gradient(90deg,#e008ce,#3f9ff3, #723ff3,);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-in 4s ease forwards;
+} */
+
+@keyframes slide-in {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
